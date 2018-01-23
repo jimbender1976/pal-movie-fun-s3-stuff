@@ -39,6 +39,10 @@ public class ActionServlet extends HttpServlet {
 
     public static int PAGE_SIZE = 5;
 
+    public ActionServlet() {
+        System.out.println("Here?");
+    }
+
     @EJB
     private MoviesBean moviesBean;
 
