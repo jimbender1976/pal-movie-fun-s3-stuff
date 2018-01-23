@@ -3,13 +3,13 @@ spring:
     prefix: /WEB-INF/
     suffix: .jsp
 
-moviefun:
-  datasources:
-    movies:
-      url: jdbc:mysql://localhost:3306/movies?useSSL=false
-      username: root
-      password:
-    albums:
-      url: jdbc:mysql://localhost:3306/albums?useSSL=false
-      username: root
-      password:
+#moviefun:
+#  datasources:
+#    movies:
+#      url: jdbc:mysql://localhost:3306/movies?useSSL=false
+#      username: root
+#      password:
+#    albums:
+#      url: jdbc:mysql://localhost:3306/albums?useSSL=false
+#      username: root
+#      password:

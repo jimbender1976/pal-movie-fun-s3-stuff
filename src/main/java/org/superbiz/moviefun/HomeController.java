@@ -50,6 +50,14 @@ public class HomeController {
 
     @GetMapping("/setup")
     public String setup(Map<String, Object> model) {
+
+        for (Movie movie : moviesBean.getMovies()) {
+            DefaultTransactionDefinition def = new DefaultTransactionDefinition();
+            TransactionStatus transactionStatus = moviesTraxManager.getTransaction(def);
+            moviesBean.deleteMovieId(movie.getId());
+            moviesTraxManager.commit(transactionStatus);
+        }
+
         for (Movie movie : movieFixtures.load()) {
             DefaultTransactionDefinition def = new DefaultTransactionDefinition();
             TransactionStatus transactionStatus = moviesTraxManager.getTransaction(def);
